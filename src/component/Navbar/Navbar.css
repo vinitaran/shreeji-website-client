@@ -1,0 +1,11 @@
+.navbar__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar__container__tiles{
+    padding: 10px;
+    text-transform: uppercase;
+}

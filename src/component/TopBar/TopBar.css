@@ -1,0 +1,23 @@
+.topBar{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5rem 0 5rem;
+}
+
+.topBar__items{
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.topBar > p:hover{
+    text-decoration: underline;
+}
+
+.topBar__seperator{
+    color: grey;
+}
