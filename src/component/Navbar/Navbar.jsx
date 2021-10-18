@@ -1,21 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const navbar = [
-  { id: 1, title: "Home" },
-  { id: 2, title: "New Arrivals" },
-  { id: 3, title: "Lehengas" },
-  { id: 4, title: "Saree" },
-  { id: 5, title: "Premium Wear" },
-  { id: 6, title: "Gowns" },
+  { id: 1, title: "Home", url:"" },
+  { id: 2, title: "New Arrivals", url:"new" },
+  { id: 3, title: "Lehengas", url:"lehengas" },
+  { id: 4, title: "Saree", url:"saree" },
+  { id: 5, title: "Premium Wear", url:"premium" },
+  { id: 6, title: "Gowns", url:"gowns" },
 ];
 
-export default function Navbar() {
+function Navbar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <div className="navbar__container">
-      {navbar.map((nav) => {
-        return <span className="navbar__container__tiles">{nav.title}</span>;
-      })}
-    </div>
+    <>
+      <nav className="navbar_row">
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? (
+            <FaTimes style={{ color: "white", padding:"0.2rem" }} />
+          ) : (
+            <FaBars style={{ color: "white", padding:"0.2rem" }} />
+          )}
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          {navbar.map((tab) => {
+            return (
+              <li className="nav-item">
+                <Link to={`/${tab.url}`} className="nav-links" onClick={closeMobileMenu}>
+                  {tab.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </>
   );
 }
+
+export default Navbar;

@@ -18,12 +18,12 @@ export default function TopBar() {
     return (
         <div className="topBar">
             <p className="topBar__items">{isMobile ? <FaUser /> : "My Profile"}</p>
-            <p className="topBar__items topBar__seperator">|</p>
+            <p className="topBar__items topBar__seperator one">|</p>
             <p className="topBar__items">{isMobile ? <FaHeart /> : "My Wishlist"}</p>
-            <p className="topBar__items topBar__seperator">|</p>
-            <p className="topBar__items">Login</p>
-            <p className="topBar__items topBar__seperator">|</p>
-            <p className="topBar__items">Checkout</p>
+            <p className="topBar__items topBar__seperator disable">|</p>
+            <p className="topBar__items disable">Login</p>
+            <p className="topBar__items topBar__seperator disable">|</p>
+            <p className="topBar__items disable">Checkout</p>
         </div>
     )
 }

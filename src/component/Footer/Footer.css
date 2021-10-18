@@ -1,0 +1,32 @@
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.footer_container{
+    width: 90%;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_container_row{
+    width: 22%;
+}
+
+.footer_container_row_title{
+    border-bottom: solid 1px gray;
+    margin: 2rem 0 1rem 0;
+}
+
+.footer_container_row_title > h5{
+    margin-bottom: 1rem;
+}
+
+.footer_container_row_body{
+    color: gray;
+}
