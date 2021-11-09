@@ -1,0 +1,28 @@
+.order__container{
+    display: flex;
+    margin: 1em;
+}
+
+.order__details{
+    flex: 2.5;
+}
+
+.order__checkout{
+    flex: 1;
+    background-color: #d3d3d32e;
+
+}
+
+.order__heading{
+    margin: 0 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 1em 0;
+    border-bottom: 2px solid black;
+}
+
+@media (max-width: 800px){
+    .order__container{
+        flex-direction: column;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const navbar = [
@@ -32,9 +32,9 @@ function Navbar() {
           {navbar.map((tab) => {
             return (
               <li className="nav-item">
-                <Link to={`/${tab.url}`} className="nav-links" onClick={closeMobileMenu}>
+                <NavLink exact to={tab.title === "Home" ? `/${tab.url}` : `/products/${tab.url}`} className="nav-links" onClick={closeMobileMenu} activeClassName="nav-links-active">
                   {tab.title}
-                </Link>
+                </NavLink>
               </li>
             );
           })}

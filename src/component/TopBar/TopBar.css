@@ -1,11 +1,14 @@
 .topBar{
-    width: 100%;
+    /* width: 100%; */
     background-color: black;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 5rem 0 5rem;
     height: 50px;
+    position: sticky;
+    z-index: 10;
+    top: 0;
 }
 
 .topBar__items{

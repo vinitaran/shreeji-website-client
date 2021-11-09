@@ -1,0 +1,19 @@
+.product__page{
+    display: flex;
+}
+
+.product__page__heading{
+    margin: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.product__body{
+    width: 100%;
+}
+
+.product__page__images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    margin: 1em;
+}

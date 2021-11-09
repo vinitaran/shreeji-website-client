@@ -1,0 +1,163 @@
+:root {
+  --size: 70px;
+  --frames: 62;
+}
+
+.product {
+  width: 250px;
+  margin: 10px;
+  background-color: #d3d3d32e;
+  transition: 0.3s ease-in-out;
+}
+
+.product:hover{
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: scale(1.01);
+  transition: 0.3s ease-in-out;
+}
+
+.product__element {
+    width: 250px;
+    height: 350px;
+}
+
+.product__overlay{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.product__overlay__outofstock{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.product__overlay:hover{
+    opacity: 1;
+}
+
+
+.product__image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+
+.product__overlay > button, .product__overlay__outofstock > button {
+    position: absolute;
+    top: 269px;
+    left: 50px;
+}
+
+.product__details{
+    padding: 10px;
+}
+
+.css-zcbmsk-MuiButtonBase-root-MuiButton-root{
+  height: 40px;
+}
+
+
+.HeartAnimation {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png");
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  background-position: left;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.HeartAnimation-mobile{
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png");
+  background-repeat: no-repeat;
+  background-size: 2900%;
+  background-position: left;
+  /* height: 80px; */
+  width: 80px;
+  cursor: pointer;
+}
+
+.product__mobile{
+    display: none;
+}
+
+.animate {
+  animation: heart-burst 0.8s steps(28) forwards;
+}
+
+@keyframes heart-burst {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@media (max-width: 800px){
+  .product__mobile{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.product__like > input {
+  display: none;
+}
+
+.product__like {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  border-radius: 999px;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hearth {
+  background-image: url('https://assets.codepen.io/23500/Hashflag-AppleEvent.svg');
+  background-size: calc(var(--size) * 62) var(--size);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--size) * (62 * -1 + 2));
+  background-position-y: calc(var(--size) * 0.02);
+  width: var(--size);
+  height: var(--size);
+}
+
+.product__like > input:checked + .hearth {
+  animation: like 1s steps(calc(62 - 3));  
+  animation-fill-mode: forwards;
+}
+
+@keyframes like {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: calc(var(--size) * (62 * -1 + 3));
+  }
+}
+
+@media (hover: hover) {
+  .product__like:hover {
+    background-color: #E1255E15;
+    
+  }
+  .hearth {
+    background-position-x: calc(var(--size) * (62 * -1 + 1));
+  }
+}
+

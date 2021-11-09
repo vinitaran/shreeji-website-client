@@ -1,102 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script:wght@400;500;600;700&family=Ephesis&family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script:wght@400;500;600;700&family=Ephesis&family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
 
-.header{
-    display: flex;
-    padding: 10px;
-    border-bottom: solid 1px lightgray;
+.header {
+  display: flex;
+  padding: 10px;
+  border-bottom: solid 1px lightgray;
 }
 
-.header__search{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header__search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .searchTerm {
-    width: 50%;
-    border: none;
-    padding: 5px;
-    height: 36px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9dbfaf;
-    border: 1px solid grey;
-    border-right: none;
+  width: 50%;
+  border: none;
+  padding: 0 5px 0 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border: 1px solid grey;
+  border-right: none;
+  display: flex;
+  align-items: center;
 }
 
 .searchTerm:focus {
-    color: #00b4cc;
-}
-
-.searchTerm:focus  { 
-    outline: none !important;
-    border-color: #719ECE;
-    /* box-shadow: 0 0 10px #719ECE; */
-    border: 2px solid black;
-    border-right: none;
+  outline: none !important;
+  border: 2px solid black;
+  border-right: none;
 }
 
 .searchTerm:focus ~ .searchButton {
-    outline: none !important;
-    border: 2px solid black;
-    border-left: none;
+  outline: none !important;
+  border: 2px solid black;
+  border-left: none;
 }
 
 .searchButton {
-    width: 40px;
-    height: 36px;
-    text-align: center;
-    color: #000;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-    border: 1px solid grey;
-    border-left: none;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  color: #000;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid grey;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header__top__mobile{
-    flex: 2;
-    display: flex;
+.header__top__mobile {
+  display: flex;
+  flex: 2;
 }
 
-.header__logo{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header__logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__logo > span {
-    font-family: 'Bonheur Royale', cursive;
-    /* font-family: 'Ephesis', cursive; */
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Dancing Script', cursive;
-    font-weight: 900;
-    font-size: calc(1em + 2vw);
+  font-family: "Bonheur Royale", cursive;
+  /* font-family: 'Ephesis', cursive; */
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: "Dancing Script", cursive;
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: calc(1em + 2vw);
 }
 
-.header__cartInfo{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.header__cartInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header__cartInfo__total{
-    font-weight: bold;
-    padding: 1rem;
+.header__cartInfo > a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.header__top__mobile > a{
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header__cartInfo__total {
+  font-weight: bold;
+  padding: 1rem;
 }
 
 @media (max-width: 600px) {
-    .header{
-        flex-direction: column-reverse;
-    }
+  .header {
+    flex-direction: column-reverse;
+  }
 
-    .searchTerm{
-        width: 100%;
-    }
-
+  .searchTerm {
+    width: 100%;
+  }
 }

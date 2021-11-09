@@ -1,0 +1,31 @@
+.checkout__component{
+    margin: 2rem;
+}
+
+.checkout__component__header{
+    color: gray;
+}
+
+.checkout__header{
+    margin: 1rem 0;
+    color: black;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.checkout__details{
+    display: flex;
+    padding: 10px;
+}
+
+.checkout__details__left{
+    flex: 1;
+}
+
+.checkout__button{
+    padding: 1.5em 0;
+}
+
+.checkout__subtotal{
+    font-weight: 600;
+}

@@ -1,5 +1,12 @@
-*{
+.App > *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+
 }
 
+ul, a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}

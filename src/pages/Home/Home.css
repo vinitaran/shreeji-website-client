@@ -1,0 +1,14 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__body{
+    width: 90%;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    justify-items: center;
+}
